@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+// APPROACH IS BY DIVIDING THE NUMBER BY 10 AND THEN CALCULATING NO OF DIGITS
+	int n,noofdigits=0;
+	cin>>n;
+	while(n>=1){
+		n=n/10;
+		noofdigits+=1;
+	}
+	cout<<noofdigits;
+	return 0;
+}
+//T.C=O(N)
+//S.C=O(1)
