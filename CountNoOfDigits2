@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+//APPROACH BY CONVERTING IT INTO STRING & THEN CALCULATING NO OF DIGITS
+	int n,noofdigits=0;
+	cin>>n;
+	string s=to_string(n);
+	cout<<s.length();
+	return 0;
+}
+//T.C=O(1)
+S.C=O(1)
