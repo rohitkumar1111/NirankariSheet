@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   //Approach :- Convert it in the String & then reverse it :
+    int N=12345;
+    string s=to_string(N);
+    string s1="";
+    for(int i=s.length();i>=0;i--){
+        s1+=s[i];
+    }
+    cout<<s1;
+}
