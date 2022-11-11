@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{   //Approach is converting the number to string and then by using two pointer approach
+    int n,reverse=0;
+    cin>>n;
+    int flag=1,i=0;
+    string str=to_string(n);
+    int left=0;
+    int right=str.length()-1;
+    while(i<str.length()/2){
+        if(str[left]!=str[right]){
+            flag=0;
+            break;
+        }
+        else{
+            flag=1;
+        }
+        i++;
+        left++;
+        right--;
+    }
+    if(flag==1){
+        cout<<"Number is palindorme";
+    }
+    else{
+        cout<<"Not palindorme";
+    }
+    return 0;
+}
