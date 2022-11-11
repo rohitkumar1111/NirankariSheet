@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{   //Approach is converting the number to string and then by using two pointer approach
+    int n1,n2,min,i,gcd,lcm;
+    cin>>n1;
+    cin>>n2;
+    if(n1<=n2){
+        min=n1;
+    }
+    else{
+        min=n2;
+    }
+    for(i=1;i<=min;i++){
+        if(n1%i==0 && n2%i==0){
+            gcd=i;
+           continue; 
+        }
+    }
+    lcm=(n1*n2)/gcd;
+    cout<<"gcd is: "<<gcd<<endl;
+    cout<<"lcm is: "<<lcm;
+    
+    return 0;
+}
