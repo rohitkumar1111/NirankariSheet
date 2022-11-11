@@ -1,0 +1,28 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{   //Approach is by calculating the count of digits and then by calcluating the power of rem to digits and add it.
+    int n,temp,temp1,count=0,sum=0;
+    cin>>n;
+    temp=n;
+    temp1=n;
+    while(temp>=1){
+        count++;
+        temp=temp/10;
+    }
+    while(n>=1){
+        int rem=n%10;
+        sum+=pow(rem,count);
+        n=n/10;
+    }
+    if(sum==temp1){
+        cout<<"The given number is armstrong";
+    }
+    else{
+        cout<<"Not an armstrong number ";
+    }
+
+    return 0;
+}
