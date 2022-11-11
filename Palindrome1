@@ -1,0 +1,23 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   //Approach is by reversing the number and then checking if the number is palindrome or not
+    int n,reverse=0;
+    cin>>n;
+    int actual=n;
+    while(n>=1){
+        int rem=n%10;
+        reverse=reverse*10+rem;
+        n=n/10;
+    }
+    if(reverse==actual){
+        cout<<"Number is palindorme";
+    }
+    else{
+        cout<<"Not palindorme";
+    }
+    return 0;
+}
