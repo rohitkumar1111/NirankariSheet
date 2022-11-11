@@ -3,7 +3,7 @@
 using namespace std;
 
 int main()
-{   //Approach is converting the number to string and then by using two pointer approach
+{   //Approach is by traversing from 1 to min(n1,n2) to find divisor and hence gcd
     int n1,n2,min,i,gcd,lcm;
     cin>>n1;
     cin>>n2;
