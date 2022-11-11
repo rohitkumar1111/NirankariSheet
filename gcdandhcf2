@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int gcd(int n1,int n2){
+    if(n1==0){
+        return n2; 
+    }
+    return gcd(n2%n1,n1);
+}
+int main()
+{   //Approach is by eucledian algorithm
+    int n1,n2,gcd1,lcm;
+    cin>>n1;
+    cin>>n2;
+    gcd1=gcd(n1,n2);
+    lcm=(n1*n2)/gcd1;
+    cout<<"gcd is: "<<gcd1<<endl;
+    cout<<"lcm is: "<<lcm;
+    
+    return 0;
+}
