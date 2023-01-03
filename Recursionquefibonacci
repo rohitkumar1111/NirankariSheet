@@ -1,0 +1,65 @@
+//{ Driver Code Starts
+//Initial function template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//User function template for C++
+
+
+class Solution
+{
+    public:
+    long long number=0;
+    long long fib=0;
+    long long last=1;
+    long long secondlast=1;
+    vector<long long> v;
+    //Function to return list containing first n fibonacci numbers.
+    vector<long long> printFibb(int n) 
+    {   
+        
+        if(number+1>n){
+            return v;
+        }
+        else if(number==0 || number==1){
+            fib=1;
+            v.push_back(fib);
+            number++;
+            return printFibb(n);
+        }
+        else{
+            fib=last+secondlast;            
+            v.push_back(fib);
+            secondlast=last;
+            last=fib;
+            number++;
+            return printFibb(n);
+        }
+    }
+};
+
+//{ Driver Code Starts.
+int main()
+ {
+     //taking total testcases
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        //taking number of elements
+        int n;
+        cin>>n;
+        Solution obj;
+        //calling function printFibb()
+        vector<long long> ans = obj.printFibb(n);
+        
+        //printing the elements of vector
+        for(long long i:ans)cout<<i<<' ';
+        cout<<endl;
+    }
+	return 0;
+}
+
+// } Driver Code Ends
